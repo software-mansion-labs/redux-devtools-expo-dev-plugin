@@ -36,7 +36,7 @@ export default function configureStore() {
   const store = createStore(
     persistedReducer,
     /// @ts-expect-error
-    composeEnhancers(applyMiddleware(...middlewares, api(createRNIDEProxyClientAsync("RNIDE-redux-devtools")))),
+    composeEnhancers(applyMiddleware(...middlewares, api(() => createRNIDEProxyClientAsync("RNIDE-redux-devtools")))),
   );
   const persistor = persistStore(store);
   return { store, persistor };
