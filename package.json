@@ -17,7 +17,8 @@
     "prepublishOnly": "expo-module prepublishOnly && npm run web:export",
     "web:install": "cd webui && npm install",
     "web:dev": "cd webui && npm start",
-    "web:export": "cd webui && npm run export"
+    "web:export": "cd webui && npm run export",
+    "build:radon": "bash ./scripts/build-radon-artifacts.sh"
   },
   "keywords": [
     "expo",
